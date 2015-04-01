@@ -235,18 +235,49 @@
     }
 }
 
-.leader {
+.page-content{
+  position: relative;
   display: block;
+  min-height: 450px;
+  clear: both;
+}
+
+.leader {
+  display: inline-block;
   width: 240px;
   padding: 20px;
-  position: fixed;
+  float: left;
   left: 0;
 
   .leader-list {
     list-style: none;
-
+    cursor: hand;
     .leader-item {
       font-size: 15px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      .post {
+        width: 80%;
+        display: none;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+
+      .leader-item-header {
+        width: 80%;
+        cursor: default;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+    }
+
+    .leader-item:hover .post{
+      display: block;
     }
   }
 }
+
+
