@@ -245,7 +245,8 @@
 .leader {
   display: inline-block;
   width: 240px;
-  padding: 20px;
+  overflow: hidden;
+  padding-left: 20px;
   float: left;
   left: 0;
 
@@ -258,11 +259,17 @@
       overflow:hidden;
       text-overflow:ellipsis;
       .post {
+        padding-left: 10px;
         width: 80%;
         display: none;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
+
+        a {
+          white-space:nowrap;
+          text-overflow:ellipsis;
+          display: block;
+          width: 100%;
+          overflow: hidden;
+        }
       }
 
       .leader-item-header {
