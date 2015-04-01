@@ -31,7 +31,7 @@ permalink: /about/
 - - -
 <br/>
 ### **资源**
-#### [**好多视频**](http://happycasts.net/)
+#### [**好多视频**](http://happycasts.net/)&nbsp;&nbsp;&nbsp;[**ihover**](http://gudh.github.io/ihover/dist/index.html)&nbsp;&nbsp;&nbsp;[**RubyGems**](https://rubygems.org/)&nbsp;&nbsp;&nbsp;[**Grunt**](http://gruntjs.com/)
 - - -
 <br/>
 ### **大牛**
