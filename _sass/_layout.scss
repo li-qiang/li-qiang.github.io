@@ -287,4 +287,9 @@
   }
 }
 
+@include media-query($on-laptop){
+  .leader{
+    display: none;
+  }
+}
 
