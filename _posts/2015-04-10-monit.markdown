@@ -1,0 +1,61 @@
+---
+layout: post
+title:  Monit
+date:   2015-04-10 20:40
+categories: tool
+---
+> Envoriment: Ubuntu 12.04.5
+
+## Install Monit ##
+
+{% highlight bash %}
+sudo apt-get install monit
+{% endhighlight %}
+
+## Config Monit ##
+
+{% highlight bash %}
+ls /etc/minit  # => conf.d  monitrc
+{% endhighlight %}
+
+monitrc 是monit的配置文件，在monitrc里面设置基本的配置。
+
+{% highlight ruby %}
+set daemon 120                     # 每 120 秒检测一次
+set logfile /var/log/monit.log     # 设置日志文件位置
+set idfile /var/lib/monit/id       # 设置PID文件的位置
+set statefile /var/lib/monit/state # 设置保存检测的结果文件位置
+
+set eventqueue                     # 设置事件的队列
+    basedir /var/lib/monit/events  # 设置队列的存储位置
+    slots 100                      # 设置队列的大小
+
+set httpd port 2812 and            # 监听 2812 端口
+  use address youDomain            # 使用域名 youDomain
+  allow user:password              # 设置用户名 user，密码 password
+
+include /etc/monit/conf.d/*        # 引入conf.d下的所有文件
+{% endhighlight %}
+
+conf.d 下面，每一个文件存放一个守护进程的配置（我是这么做的）。比如 Nginx
+{% highlight ruby %}
+#nginx.conf
+check process nginx with pidfile /path/to/nginx.pid
+  start program = "/etc/init.d/nginx start"
+  stop program = "/etc/init.d/nginx stop"
+  if memory usage > 75% then alert
+  if cpu usage > 70% then alert
+{% endhighlight %}
+
+## Start Monit ##
+启动 Monit
+{% highlight bash %}
+sudo monit start
+{% endhighlight %}
+
+修改配置之后，重新加载 Monit
+{% highlight bash %}
+sudo monit reload
+{% endhighlight %}
+
+[参考](http://www.vpser.net/manage/monit.html)

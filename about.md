@@ -4,6 +4,9 @@ title: 关于作者
 permalink: /about/
 ---
 
+## 总结自己的知识与经验，就是再次提升
+- - -
+<br>
 ## **My Favorite**
 * * *
 <br/>
@@ -31,9 +34,9 @@ permalink: /about/
 - - -
 <br/>
 ### **资源**
-#### [**好多视频**](http://happycasts.net/)&nbsp;&nbsp;&nbsp;[**ihover**](http://gudh.github.io/ihover/dist/index.html)&nbsp;&nbsp;&nbsp;[**RubyGems**](https://rubygems.org/)&nbsp;&nbsp;&nbsp;[**Grunt**](http://gruntjs.com/)&nbsp;&nbsp;&nbsp;[**慕课**](http://www.imooc.com/)
+#### [**好多视频**](http://happycasts.net/)&nbsp;&nbsp;&nbsp;[**ihover**](http://gudh.github.io/ihover/dist/index.html)&nbsp;&nbsp;&nbsp;[**RubyGems**](https://rubygems.org/)&nbsp;&nbsp;&nbsp;[**Grunt**](http://gruntjs.com/)&nbsp;&nbsp;&nbsp;[**慕课**](http://www.imooc.com/)&nbsp;&nbsp;&nbsp;[**C语言**](http://c.biancheng.net/)
 - - -
 <br/>
 ### **大牛**
-#### [**光磊博客**](http://liguanglei.name/blogs/)&nbsp;&nbsp;&nbsp;[**XuFei**](https://github.com/xufei/blog/issues)
+#### [**光磊博客**](http://liguanglei.name/blogs/)&nbsp;&nbsp;&nbsp;[**XuFei**](https://github.com/xufei/blog/issues)&nbsp;&nbsp;&nbsp;[**Fulei**](http://perfectfoolish.logdown.com/)
 
