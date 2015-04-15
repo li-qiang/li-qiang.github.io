@@ -34,6 +34,17 @@ set httpd port 2812 and            # 监听 2812 端口
   use address youDomain            # 使用域名 youDomain
   allow user:password              # 设置用户名 user，密码 password
 
+set mailserver smtp.exmail.qq.com port 25                    # 设置发送邮件的server
+    username "your_mail@qq.com" password "your_password"     # 设置发送邮件的邮箱
+ 
+set mail-format {                  # 设置邮件格式
+  from: your_mail@qq.com
+  subject: $SERVICE $EVENT at $DATE
+  message: Monit $ACTION $SERVICE at $DATE on $HOST: $DESCRIPTION.
+}
+
+set alert notify_mail@xx.com       # 设置接收提醒的邮箱
+
 include /etc/monit/conf.d/*        # 引入conf.d下的所有文件
 {% endhighlight %}
 
