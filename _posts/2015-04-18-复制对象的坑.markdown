@@ -1,0 +1,54 @@
+---
+layout: default
+title: Dup and Clone
+categories: keng
+tags: ruby
+---
+## Environment ##
+Ruby 2.1.1 and no any external libraries
+- - -
+
+{% highlight ruby %}
+class Person
+  attr_reader :dogs
+
+  def initialize
+    @dogs = []
+  end
+
+  def add_dog(dog)
+    @dogs << dog
+  end
+end
+
+me = Person.new
+
+me.add_dog(dog1)
+
+me.add_dog(dog2)
+
+me.dogs # => dog1 and dog2
+
+he = me.dup # => a new person
+
+he.add_dog(dog3)
+
+he.dogs # => dog1, dog2 and dog3
+
+me.dogs # => dog1, dog2 and dog3. It's not my mind!
+
+she = me.clone
+
+she.dogs # => dog1,dog2 and dog3, because of my dogs
+
+she.add_dog(dog4)
+
+she.dogs # => dog1,dog2, dog3 and dog4
+
+me.dogs # => dog1,dog2,dog3 and dog4
+
+he.dogs # => dog1,dog2,dog3 and dog4
+
+{% endhighlight %}
+
+> The only reason is that Array is a reference type variable in ruby
