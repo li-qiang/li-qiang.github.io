@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Dup and Clone
-categories: keng
-tags: ruby
+categories: ruby 
+tags: keng
 ---
 ## Environment ##
 Ruby 2.1.1 and no any external libraries

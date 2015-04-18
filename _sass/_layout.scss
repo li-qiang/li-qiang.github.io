@@ -293,3 +293,15 @@
   }
 }
 
+.tag:before{
+  content: '•';
+  padding-right: 2px;
+}
+
+.tag{
+  background: #eeeeff;
+  padding: 0 2px;
+  border-radius: 5%;
+  display: inline-block;
+}
+
