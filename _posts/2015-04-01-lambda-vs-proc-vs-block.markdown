@@ -2,7 +2,7 @@
 layout: post
 title:  Lambda vs Proc vs Block
 date:   2015-03-30 23:42:02
-categories: Ruby
+categories: ruby
 ---
 ## Lambda vs Proc
 
@@ -16,7 +16,7 @@ class A
     p.call
     2
   end
-    
+
   def proc_test
     p = Proc.new { return 1 }
     p.call
@@ -79,7 +79,7 @@ a = A.new
 
 l1 = lambda { p 'lambda 1'}
 l2 = lambda { p 'lambda 2'}
- 
+
 a.run(l1,l2){ p 'block' } # => 分行输出 "lambda 1"、"lambda 2"、"block"
 
 p1 = Proc.new { p 'proc 1' }
@@ -113,4 +113,3 @@ a.block_test{|x, y| x + y } # => 返回 3
 ####1. **对象**####
 a. **Block不是对象**
 b. **Proc是对象**
-

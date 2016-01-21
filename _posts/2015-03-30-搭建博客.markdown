@@ -2,10 +2,10 @@
 layout: post
 title:  Build Blog
 date:   2015-03-30 23:42:02
-categories: Ruby
+categories: ruby
 ---
 # 环境：Ruby
-- - - 
+- - -
 <br/>
 ## 安装Jekyll
 
@@ -19,12 +19,12 @@ gem install jekyll # 安装Jekyll
 mkdir myBlog       # 新建一个文件夹
 cd myBlog          # 进入新建好的文件夹中
 jekyll new myBlog  # 生成Jekyll项目
-{% endhighlight %} 
- 
+{% endhighlight %}
+
 ## 启动本地服务器
 
 {% highlight bash %}
-jekyll serve       #使用浏览器打开 http://localhost:4000 
+jekyll serve       #使用浏览器打开 http://localhost:4000
 {% endhighlight %}
 
 [Jekyll 文档](http://jekyllcn.com/)
