@@ -32,7 +32,7 @@ readStream.on('readable', () => {
 
 ### **Diff**: `data` vs `readable`
 
-1. **Listener arguments is different.**
+1. **Listener arguments are different.**
   _`data` has an string or buffer argument. `readable` has none._
 
 2. **`data` is quicker than `readable`.**
@@ -42,7 +42,7 @@ readStream.on('readable', () => {
   _When a chunk of data is ready, it emits a readable event. If don't read the
   chunk data, it will not emit the readable listener again._
 
-4. **`data` listener can make `readable` listener useless.**
+4. **`data` listener make `readable` listener useless.**
 
 {% highlight javascript %}
 
