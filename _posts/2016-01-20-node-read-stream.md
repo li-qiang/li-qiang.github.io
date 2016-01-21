@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  Node Read Stream
+title: data&nbsp;  VS  &nbsp;readable
 categories: node
+tags: ReadStream
 ---
-## Events
+## **Events**
 
 - Event: `data`
 
@@ -18,44 +19,9 @@ readStream.on('data', (chunk) => {
 });
 {% endhighlight %}
 
-
-- Event: `close`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emitted when the stream and any of its underlying
-resources (a file descriptor, for example) have been closed. The event indicates
-that no more events will be emitted, and no further computation will occur.
-
-{% highlight javascript %}
-readStream.on('close', () => {
-  //...do something
-});
-{% endhighlight %}
-
-- Event: `error`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emitted when a chunk of data can not be read from
-the stream.
-
-{% highlight javascript %}
-readStream.on('error', () => {
-  //...do something
-});
-{% endhighlight %}
-
-- Event: `end`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emitted when all the data is loaded and there is
-no more data.
-
-{% highlight javascript %}
-readStream.on('end', () => {
-  //...do something
-});
-{% endhighlight %}
-
 - Event: `readable`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emitted when a chunk of data can be read from the stream
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emitted when a chunk of data can be read from the stream.
 
 {% highlight javascript %}
 readStream.on('readable', () => {
@@ -72,8 +38,11 @@ readStream.on('readable', () => {
 2. **`data` is quicker than `readable`.**
   _Read a 90M file, `data` spends 80 ms and `readable` spends 90 ms
   (Run 10 times and get the average)._
+3. **`readable` can be controlled but `data` can't.**
+  _When a chunk of data is ready, it emits a readable event. If don't read the
+  chunk data, it will not emit the readable listener again._
 
-3. **`data` listener can make `readable` listener useless.**
+4. **`data` listener can make `readable` listener useless.**
 
 {% highlight javascript %}
 
@@ -89,3 +58,15 @@ readStream.on('readable', () => {
 // data xxxx
 // readable null
 {% endhighlight %}
+
+## **Summary**
+
+- `data`
+  If you want the speed is faster. add a `data` listener.
+<br>
+<br>
+- `readable`
+  If you want control the speed, add a `readable` listener.
+<br>
+<br>
+- Don't add `readable` listener when the stream has `data` listener.
