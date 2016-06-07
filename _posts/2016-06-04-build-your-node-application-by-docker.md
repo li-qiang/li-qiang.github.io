@@ -2,7 +2,7 @@
 layout: post
 title:  Build Your Node Application By Docker
 date:   2016-06-03 10:25:00
-categories: tools
+categories: node
 ---
 
 ### Build Your Image
